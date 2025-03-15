@@ -1,22 +1,8 @@
+import 'package:docdoc/Core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 
+import 'doc_app.dart';
+
 void main() {
-  runApp(const Docdoc());
-}
-
-class Docdoc extends StatelessWidget {
-  const Docdoc({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Docdoc',
-      home: Scaffold(
-        body: Center(
-          child: Text('Docdoc'),
-        ),
-      ),
-    );
-  }
+  runApp(DocApp(appRouter: AppRouter()));
 }
