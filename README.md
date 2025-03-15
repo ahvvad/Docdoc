@@ -54,6 +54,7 @@ Follow this structure when modifying or contributing to ensure code consistency.
 ---
 ## Gallery
 <img src="assets/preview/comingsoon.png" />
+
 ---
 
 ### Explore the UI through [this link](preview)
