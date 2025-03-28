@@ -42,6 +42,7 @@ dependencies:
   # Automatically generate code for converting to and from JSON by annotating Dart classes.
   json_serializable: ^6.9.4
   json_annotation: ^4.9.0
+  build_runner: ^2.4.15
   # Localization
   intl: ^0.19.0
   easy_localization: ^3.0.7+1
@@ -56,6 +57,7 @@ dependencies:
   flutter_svg: ^2.0.17
   # For adapting screen & font size
   flutter_screenutil: ^5.9.3
+  
 
 
 dev_dependencies:
