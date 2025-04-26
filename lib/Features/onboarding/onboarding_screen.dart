@@ -1,12 +1,13 @@
-import 'package:docdoc/Core/theming/styles.dart';
-import 'package:docdoc/Features/onboarding/widgets/doc_log_and_name.dart';
-import 'package:docdoc/Features/onboarding/widgets/doctor_image_and_text.dart';
-import 'package:docdoc/Features/onboarding/widgets/get_started_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Onboarding extends StatelessWidget {
-  const Onboarding({super.key});
+import '../../core/theming/styles.dart';
+import 'widgets/doc_logo_and_name.dart';
+import 'widgets/doctor_image_and_text.dart';
+import 'widgets/get_started_button.dart';
+
+class OnboardingScreen extends StatelessWidget {
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +22,19 @@ class Onboarding extends StatelessWidget {
               SizedBox(height: 30.h),
               const DoctorImageAndText(),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0.w),
+                padding: EdgeInsets.symmetric(horizontal: 30.w),
                 child: Column(
                   children: [
                     Text(
-                      'Manage and schedule all of your medical appointments easily\nwith Docdoc to get a new experience.',
-                      textAlign: TextAlign.center,
+                      'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
                       style: TextStyles.font13GrayRegular,
+                      textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 30.h),
-                    const GetStartedButton()
+                    const GetStartedButton(),
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ),

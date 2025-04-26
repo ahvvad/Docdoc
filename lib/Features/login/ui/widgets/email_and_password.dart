@@ -1,11 +1,11 @@
-import 'package:docdoc/Core/helpers/app_regex.dart';
-import 'package:docdoc/Core/theming/colors.dart';
-import 'package:docdoc/Core/theming/spacing.dart';
-import 'package:docdoc/Core/widgets/app_text_form_field.dart';
-import 'package:docdoc/Features/login/logic/cubit/login_cubit.dart';
-import 'package:docdoc/Features/login/ui/widgets/password_validations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:docdoc/core/helpers/app_regex.dart';
+import 'package:docdoc/features/login/logic/cubit/login_cubit.dart';
+
+import '../../../../core/helpers/spacing.dart';
+import '../../../../core/widgets/app_text_form_field.dart';
+import 'password_validations.dart';
 
 class EmailAndPassword extends StatefulWidget {
   const EmailAndPassword({super.key});
@@ -17,9 +17,9 @@ class EmailAndPassword extends StatefulWidget {
 class _EmailAndPasswordState extends State<EmailAndPassword> {
   bool isObscureText = true;
 
-  bool haslowercase = false;
+  bool hasLowercase = false;
   bool hasUppercase = false;
-  bool hasSpecialChar = false;
+  bool hasSpecialCharacters = false;
   bool hasNumber = false;
   bool hasMinLength = false;
 
@@ -27,17 +27,18 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
 
   @override
   void initState() {
-    passwordController = context.read<LoginCubit>().passwordController;
-    setupPasswordcontrollerListener();
     super.initState();
+    passwordController = context.read<LoginCubit>().passwordController;
+    setupPasswordControllerListener();
   }
 
-  void setupPasswordcontrollerListener() {
+  void setupPasswordControllerListener() {
     passwordController.addListener(() {
       setState(() {
-        haslowercase = AppRegex.hasLowerCase(passwordController.text);
+        hasLowercase = AppRegex.hasLowerCase(passwordController.text);
         hasUppercase = AppRegex.hasUpperCase(passwordController.text);
-        hasSpecialChar = AppRegex.hasSpecialChar(passwordController.text);
+        hasSpecialCharacters =
+            AppRegex.hasSpecialCharacter(passwordController.text);
         hasNumber = AppRegex.hasNumber(passwordController.text);
         hasMinLength = AppRegex.hasMinLength(passwordController.text);
       });
@@ -56,7 +57,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               if (value == null ||
                   value.isEmpty ||
                   !AppRegex.isEmailValid(value)) {
-                return 'Please enter your email';
+                return 'Please enter a valid email';
               }
             },
             controller: context.read<LoginCubit>().emailController,
@@ -67,28 +68,29 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             hintText: 'Password',
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(
-              onTap: () => setState(() {
-                isObscureText = !isObscureText;
-              }),
+              onTap: () {
+                setState(() {
+                  isObscureText = !isObscureText;
+                });
+              },
               child: Icon(
                 isObscureText ? Icons.visibility_off : Icons.visibility,
-                color: ColorsManager.mainBlue,
               ),
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return 'Please enter a valid password';
               }
             },
           ),
           verticalSpace(24),
           PasswordValidations(
-            haslowercase: haslowercase,
-            hasUppercase: hasUppercase,
-            hasSpecialChar: hasSpecialChar,
+            hasLowerCase: hasLowercase,
+            hasUpperCase: hasUppercase,
+            hasSpecialCharacters: hasSpecialCharacters,
             hasNumber: hasNumber,
             hasMinLength: hasMinLength,
-          )
+          ),
         ],
       ),
     );
