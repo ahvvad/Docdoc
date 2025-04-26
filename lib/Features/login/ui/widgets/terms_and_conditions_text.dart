@@ -1,5 +1,6 @@
-import 'package:docdoc/Core/theming/styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/theming/styles.dart';
 
 class TermsAndConditionsText extends StatelessWidget {
   const TermsAndConditionsText({super.key});
@@ -12,22 +13,19 @@ class TermsAndConditionsText extends StatelessWidget {
         children: [
           TextSpan(
             text: 'By logging, you agree to our',
-            style: TextStyles.font13GrayRegular.copyWith(fontSize: 12.0),
+            style: TextStyles.font13GrayRegular,
           ),
           TextSpan(
             text: ' Terms & Conditions',
-            style: TextStyles.font13DarkBlueMedium.copyWith(fontSize: 12.0),
+            style: TextStyles.font13DarkBlueMedium,
           ),
           TextSpan(
             text: ' and',
-            style: TextStyles.font13GrayRegular.copyWith(
-              height: 1.5,
-              fontSize: 12.0,
-            ),
+            style: TextStyles.font13GrayRegular.copyWith(height: 1.5),
           ),
           TextSpan(
             text: ' Privacy Policy',
-            style: TextStyles.font13DarkBlueMedium.copyWith(fontSize: 12.0),
+            style: TextStyles.font13DarkBlueMedium,
           ),
         ],
       ),

@@ -1,19 +1,24 @@
-import 'package:docdoc/Core/di/dependecy_injection.dart';
-import 'package:docdoc/Features/home/ui/home_screen.dart';
-import 'package:docdoc/Features/login/logic/cubit/login_cubit.dart';
-import 'package:docdoc/Features/login/ui/login_screen.dart';
-import 'package:docdoc/Features/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:docdoc/core/routing/routes.dart';
+import 'package:docdoc/features/home/ui/home_screen.dart';
+import 'package:docdoc/features/login/logic/cubit/login_cubit.dart';
+import 'package:docdoc/features/login/ui/login_screen.dart';
+import 'package:docdoc/features/onboarding/onboarding_screen.dart';
+import 'package:docdoc/features/sign_up/logic/sign_up_cubit.dart';
+import 'package:docdoc/features/sign_up/ui/sign_up_screen.dart';
 
-import 'routes.dart';
+import '../di/dependency_injection.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
+    //this arguments to be passed in any screen like this ( arguments as ClassName )
+    final arguments = settings.arguments;
+
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
-          builder: (_) => const Onboarding(),
+          builder: (_) => const OnboardingScreen(),
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
@@ -22,18 +27,22 @@ class AppRouter {
             child: const LoginScreen(),
           ),
         );
-      case Routes.homeScreen:
+      case Routes.signUpScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
-            child: const HomeScreen(),
+            create: (context) => getIt<SignupCubit>(),
+            child: const SignupScreen(),
           ),
+        );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
         );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
             body: Center(
-              child: Text('No route defined ${settings.name}'),
+              child: Text('No route defined for ${settings.name}'),
             ),
           ),
         );
