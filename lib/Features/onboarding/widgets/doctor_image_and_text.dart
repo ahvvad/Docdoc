@@ -1,6 +1,7 @@
-import 'package:docdoc/Core/theming/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../core/theming/styles.dart';
 
 class DoctorImageAndText extends StatelessWidget {
   const DoctorImageAndText({super.key});
@@ -9,13 +10,13 @@ class DoctorImageAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SvgPicture.asset("assets/svgs/docdoc_logo_low_opacity.svg"),
+        SvgPicture.asset('assets/svgs/docdoc_logo_low_opacity.svg'),
         Container(
           foregroundDecoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 Colors.white,
-                Colors.white.withAlpha(0),
+                Colors.white.withOpacity(0.0),
               ],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,

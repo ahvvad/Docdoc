@@ -1,7 +1,8 @@
-import 'package:docdoc/Core/theming/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../core/theming/styles.dart';
 
 class DocLogoAndName extends StatelessWidget {
   const DocLogoAndName({super.key});
@@ -14,7 +15,7 @@ class DocLogoAndName extends StatelessWidget {
         SvgPicture.asset('assets/svgs/docdoc_logo.svg'),
         SizedBox(width: 10.w),
         Text(
-          'Docdoc',
+          'DocDoc',
           style: TextStyles.font24BlackBold,
         ),
       ],
