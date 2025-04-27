@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:docdoc/features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
-import 'package:docdoc/features/sign_up/ui/widgets/sign_up_form.dart';
+import 'package:docdoc/Features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
+import 'package:docdoc/Features/sign_up/ui/widgets/sign_up_form.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/helpers/spacing.dart';
-import '../../../core/theming/styles.dart';
-import '../../../core/widgets/app_text_button.dart';
+import '../../../Core/helpers/spacing.dart';
+import '../../../Core/theming/styles.dart';
+import '../../../Core/widgets/app_text_button.dart';
 import '../../login/ui/widgets/terms_and_conditions_text.dart';
 import '../logic/sign_up_cubit.dart';
 import 'widgets/already_have_account_text.dart';

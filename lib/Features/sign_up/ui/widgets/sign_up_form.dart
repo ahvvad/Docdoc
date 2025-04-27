@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:docdoc/core/helpers/app_regex.dart';
-import 'package:docdoc/features/sign_up/logic/sign_up_cubit.dart';
+import 'package:docdoc/Core/helpers/app_regex.dart';
+import 'package:docdoc/Features/sign_up/logic/sign_up_cubit.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/widgets/app_text_form_field.dart';
+import '../../../../Core/helpers/spacing.dart';
+import '../../../../Core/widgets/app_text_form_field.dart';
 import '../../../login/ui/widgets/password_validations.dart';
 
 class SignupForm extends StatefulWidget {
