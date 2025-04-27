@@ -1,13 +1,13 @@
 // signup_bloc_listener.dart
-import 'package:docdoc/features/sign_up/data/models/sign_up_response.dart';
-import 'package:docdoc/features/sign_up/logic/sign_up_cubit.dart';
+import 'package:docdoc/Features/sign_up/data/models/sign_up_response.dart';
+import 'package:docdoc/Features/sign_up/logic/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:docdoc/core/helpers/extensions.dart';
+import 'package:docdoc/Core/helpers/extensions.dart';
 
-import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/colors.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../Core/routing/routes.dart';
+import '../../../../Core/theming/colors.dart';
+import '../../../../Core/theming/styles.dart';
 import '../../logic/sign_up_state.dart';
 
 class SignupBlocListener extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:docdoc/core/helpers/extensions.dart';
-import 'package:docdoc/core/routing/routes.dart';
+import 'package:docdoc/Core/helpers/extensions.dart';
+import 'package:docdoc/Core/routing/routes.dart';
 
-import '../../../../core/theming/styles.dart';
+import '../../../../Core/theming/styles.dart';
 
 class DontHaveAccountText extends StatelessWidget {
   const DontHaveAccountText({super.key});

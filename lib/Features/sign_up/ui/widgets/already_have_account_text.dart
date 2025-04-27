@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:docdoc/core/helpers/extensions.dart';
+import 'package:docdoc/Core/helpers/extensions.dart';
 
-import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../Core/routing/routes.dart';
+import '../../../../Core/theming/styles.dart';
 
 class AlreadyHaveAccountText extends StatelessWidget {
   const AlreadyHaveAccountText({super.key});
