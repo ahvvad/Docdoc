@@ -14,7 +14,7 @@ platform :android do
       # From Firebase or firebase.json in your project root after adding `Firebase CLI`.
       app: "1:884134719783:android:2697e0adf9830db8aff902",
       # From firebase login:ci after logging in and setting up in android file.
-      firebase_cli_token: ENV("FIREBASE_CLI_TOKEN"),
+      firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
       # From firebase Docs.
       android_artifact_type: "APK",
       android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
