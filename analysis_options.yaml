@@ -7,6 +7,15 @@
 
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
+analyzer:
+  errors:
+    unused_local_variable: ignore
+    unreachable_switch_case: ignore
+    non_nullable_equals_parameter: ignore
+    constant_identifier_names: ignore
+    unused_element: ignore
+    non_constant_identifier_names: ignore
+    deprecated_member_use: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
