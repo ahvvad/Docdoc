@@ -1,55 +1,18 @@
-import 'package:docdoc/Core/helpers/spacing.dart';
-import 'package:docdoc/Core/theming/styles.dart';
+import 'package:docdoc/Features/home/data/models/specializations_response_model.dart';
+import 'package:docdoc/Features/home/ui/widgets/doctors_list_view_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DoctorsListView extends StatelessWidget {
-  const DoctorsListView({super.key});
-
+  const DoctorsListView({super.key, this.doctorsList});
+  final List<Doctors?>? doctorsList;
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: 10,
+        itemCount: doctorsList?.length,
         itemBuilder: (context, index) {
-          return Container(
-            margin: EdgeInsets.only(bottom: 16.h),
-            child: Row(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12.0),
-                  child: Image.asset(
-                    width: 110.w,
-                    height: 120.h,
-                    'assets/images/home_male_doc.png',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                horizontalSpace(16),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Dr. Randy Wigham',
-                        style: TextStyles.font18DarkBlueBold,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      verticalSpace(5),
-                      Text(
-                        'General | RSUD Gatot Subroto',
-                        style: TextStyles.font12GrayMedium,
-                      ),
-                      verticalSpace(5),
-                      Text(
-                        'email@email.com',
-                        style: TextStyles.font12GrayMedium,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+          return DoctorsListViewItem(
+            doctorsModel: doctorsList?[index],
           );
         },
       ),
