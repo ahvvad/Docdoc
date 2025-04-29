@@ -1,0 +1,18 @@
+# build command: dart run flutter_launcher_icons -f app_icon.yaml
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/blue_icon.png"
+
+  # Minimum Android SDK version supported (16 = Android 4.1, default is 21)
+  min_sdk_android: 16
+
+  # Adaptive Icon settings (used for Android 8.0 and above)
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icon/blue_icon.png"
+
+  # iOS-specific settings
+  # Removes transparency (iOS does not allow alpha in icons)
+  # Fallback background color after removing transparency
+  remove_alpha_ios: true         
+  background_color_ios: "#ffffff" 
