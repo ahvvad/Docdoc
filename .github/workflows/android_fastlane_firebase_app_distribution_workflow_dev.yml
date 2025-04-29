@@ -1,9 +1,9 @@
-name: Android Fastlane with Firebase App Distribution Workflow Production Release
+name: Android Fastlane with Firebase App Distribution Workflow Production Release Testing
 
 on:
   push:
     branches:
-      - main
+      - development
 
 jobs:
   distribute_to_firebase:
