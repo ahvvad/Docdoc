@@ -57,10 +57,14 @@ dependencies:
   flutter_svg: ^2.0.17
   # For adapting screen & font size
   flutter_screenutil: ^5.9.3
+  # reading and writing simple key-value pairs
   shared_preferences: ^2.5.3
+  # provides API to store data in secure storage.
   flutter_secure_storage: ^4.2.1
-  
+  # easy way to add shimmer effect
 
+  shimmer: ^3.0.0
+  cached_network_image: ^3.4.1
 
 dev_dependencies:
   flutter_test:
