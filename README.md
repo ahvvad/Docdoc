@@ -75,6 +75,6 @@ Follow this structure when modifying or contributing to ensure code consistency.
 
 ---
 
-### Explore the UI through [this link](preview)
+### Explore the UI through [this link](assets/preview)
 
 #### **Contact me anytime if you have questions.** : [Here](https://linktr.ee/userahmed)
