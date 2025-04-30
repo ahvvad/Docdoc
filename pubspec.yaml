@@ -57,6 +57,8 @@ dependencies:
   flutter_svg: ^2.0.17
   # For adapting screen & font size
   flutter_screenutil: ^5.9.3
+  shared_preferences: ^2.5.3
+  flutter_secure_storage: ^4.2.1
   
 
 

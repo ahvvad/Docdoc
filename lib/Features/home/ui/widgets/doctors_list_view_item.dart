@@ -4,7 +4,6 @@ import 'package:docdoc/Features/home/data/models/specializations_response_model.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class DoctorsListViewItem extends StatelessWidget {
   final Doctors? doctorsModel;
   const DoctorsListViewItem({super.key, this.doctorsModel});
@@ -17,10 +16,10 @@ class DoctorsListViewItem extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12.0),
-            child: Image.network(
-              width: 110.w,
-              height: 120.h,
-              'assets/images/home_male_doc.png',
+            child: Image.asset(
+              width: 90.w,
+              height: 100.h,
+              'assets/images/user_doc.png',
               fit: BoxFit.cover,
             ),
           ),
