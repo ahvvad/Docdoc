@@ -53,7 +53,25 @@ Follow this structure when modifying or contributing to ensure code consistency.
 ```
 ---
 ## Gallery
-<img src="assets/preview/comingsoon.png" />
+<div >
+<img  src="assets/preview/0.jpg" width="24%" height="auto">
+<img style="margin-left:0px;" src="assets/preview/1.jpg" width="24%" >
+<img style="margin-left:0px;" src="assets/preview/2.png" width="24%" >
+<img  src="assets/preview/3.jpg" width="24%" height="auto">
+</div>
+
+<div >
+<img  src="assets/preview/4.jpg" width="24%" height="auto">
+<img style="margin-left:0px;" src="assets/preview/5.jpg" width="24%" >
+<img style="margin-left:0px;" src="assets/preview/6.jpg" width="24%" >
+<img  src="assets/preview/7.jpg" width="24%" height="auto">
+</div>
+
+<div >
+<img  src="assets/preview/8.jpg" width="24%" height="auto">
+<img style="margin-left:0px;" src="assets/preview/9.jpg" width="24%" >
+
+</div>
 
 ---
 
