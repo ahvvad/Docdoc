@@ -1,3 +1,5 @@
+import 'package:docdoc/Core/helpers/constants.dart';
+import 'package:docdoc/Core/helpers/shared_pref_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:docdoc/Features/login/data/models/login_request_body.dart';
@@ -20,10 +22,15 @@ class LoginCubit extends Cubit<LoginState> {
         password: passwordController.text,
       ),
     );
-    response.when(success: (loginResponse) {
+    response.when(success: (loginResponse) async {
       emit(LoginState.success(loginResponse));
+      await saveUserToken(loginResponse.userData?.token ?? '');
     }, failure: (error) {
       emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
     });
+  }
+
+  saveUserToken(String token) async {
+    await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
   }
 }
